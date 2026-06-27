@@ -1,7 +1,7 @@
 import type {
   HeroStat,
-  InstagramProfile,
   InstagramItem,
+  InstagramProfile,
   NavItem,
   SeoMeta,
   Service,
@@ -14,115 +14,119 @@ export const siteConfig = {
   legalName: "Dory Sport",
   location: "Puerto Montt, Chile",
   description:
-    "Confeccion, bordados y prendas personalizadas para personas, pymes y empresas en Puerto Montt.",
-  whatsappNumber: import.meta.env.PUBLIC_WHATSAPP_NUMBER || "56900000000",
+    "Confección, bordados y prendas personalizadas para personas, pymes y empresas en Puerto Montt.",
+  whatsappNumber: import.meta.env.PUBLIC_WHATSAPP_NUMBER || "56984062107",
+  whatsappDisplay: "+56 9 8406 2107",
   instagramUrl:
     import.meta.env.PUBLIC_INSTAGRAM_URL ||
     "https://www.instagram.com/tienda.dory_sport/",
   siteUrl:
     import.meta.env.PUBLIC_SITE_URL || "https://dory-sport.netlify.app",
-  email: "contacto@dorysport.cl",
 };
 
 export const navItems: NavItem[] = [
-  { href: "/", label: "Inicio" },
-  { href: "/servicios", label: "Servicios" },
-  { href: "/empresas", label: "Empresas" },
-  { href: "/catalogo", label: "Catalogo" },
-  { href: "/nosotros", label: "Nosotros" },
-  { href: "/contacto", label: "Contacto" },
+  { href: "/#inicio", label: "Inicio" },
+  { href: "/#servicios", label: "Servicios" },
+  { href: "/#empresas", label: "Empresas" },
+  { href: "/#trabajos", label: "Trabajos" },
+  { href: "/#nosotros", label: "Nosotros" },
+  { href: "/#contacto", label: "Contacto" },
 ];
 
 export const heroStats: HeroStat[] = [
-  { value: "+30 anos", label: "experiencia en confecciones y costura" },
-  { value: "B2C + B2B", label: "atencion a personas, pymes y empresas" },
-  { value: "Pedidos por volumen", label: "prendas corporativas y bordado profesional" },
+  { value: "+30 años", label: "de experiencia en confección y costura" },
+  { value: "B2C + B2B", label: "atención a personas, pymes y empresas" },
+  { value: "Pedidos por volumen", label: "para marcas, equipos y negocios" },
 ];
 
 export const services: Service[] = [
   {
     title: "Bordados personalizados",
     description:
-      "Bordado profesional de logos, nombres y piezas textiles para marcas, equipos y pedidos particulares.",
-    bullets: ["Logos corporativos", "Nombres y series", "Terminacion prolija"],
+      "Aplicación prolija de logos, nombres y piezas textiles para marcas, equipos y pedidos particulares.",
+    bullets: ["Logos corporativos", "Nombres y series", "Terminación prolija"],
   },
   {
-    title: "Confeccion a medida",
+    title: "Confección a medida",
     description:
-      "Prendas hechas con enfoque artesanal y terminacion cuidada, ajustadas al uso real del cliente.",
+      "Prendas hechas con enfoque artesanal, buena caída y terminación cuidada para uso real.",
     bullets: ["Modelos personalizados", "Tallas y ajustes", "Trabajo por encargo"],
   },
   {
     title: "Ropa deportiva",
     description:
-      "Conjuntos, calzas, polerones, joggers y buzos con una direccion visual mas limpia y funcional.",
+      "Conjuntos, calzas, polerones, joggers y buzos con una presentación limpia y funcional.",
     bullets: ["Conjuntos deportivos", "Buzos y joggers", "Series para academias"],
   },
   {
     title: "Pedidos para empresas",
     description:
-      "Produccion para pymes y empresas que necesitan imagen de marca aplicada a pecheras, gorros y uniformes.",
+      "Desarrollo de pecheras, gorros, polerones y prendas corporativas para pymes y empresas.",
     bullets: ["Pecheras corporativas", "Gorros bordados", "Cotizaciones por volumen"],
   },
 ];
 
 export const showcaseItems: ShowcaseItem[] = [
   {
-    title: "Conjuntos deportivos",
-    category: "Confeccion deportiva",
-    image:
-      "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=1200&q=80",
-    alt: "Conjunto deportivo femenino en estudio",
-    description: "Lineas deportivas con una presentacion limpia, funcional y personalizada.",
-  },
-  {
     title: "Pecheras y textiles de marca",
     category: "Pedidos corporativos",
     image:
-      "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=1200&q=80",
-    alt: "Prendas corporativas con enfoque de marca",
-    description: "Produccion orientada a negocios que necesitan uniformidad visual y terminacion profesional.",
+      "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=1400&q=80",
+    alt: "Prendas textiles colgadas en una selección de producción comercial",
+    description:
+      "Una imagen editorial para representar pedidos por volumen, uniformidad visual y trabajo para marcas.",
   },
   {
     title: "Bordado fino de logos",
     category: "Bordado profesional",
     image:
       "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=1200&q=80",
-    alt: "Detalle de bordado en tela",
-    description: "Aplicacion textil de marca con protagonismo en detalle, textura y precision.",
+    alt: "Detalle editorial de una prenda doblada con presentación cuidada",
+    description:
+      "Ayuda a comunicar precisión, terminación y cuidado por la identidad visual aplicada al textil.",
   },
   {
-    title: "Polerones y prendas personalizadas",
-    category: "Catalogo personalizado",
+    title: "Confección para series pequeñas",
+    category: "Trabajo a medida",
     image:
-      "https://images.unsplash.com/photo-1523398002811-999ca8dec234?auto=format&fit=crop&w=1200&q=80",
-    alt: "Polerones en tonos neutros",
-    description: "Prendas pensadas tanto para uso diario como para proyectos institucionales.",
+      "https://images.unsplash.com/photo-1445205170230-053b83016050?auto=format&fit=crop&w=1200&q=80",
+    alt: "Selección editorial de prendas textiles en exhibición",
+    description:
+      "Refuerza la idea de prendas personalizadas, cápsulas textiles y producción cercana.",
+  },
+  {
+    title: "Ropa deportiva personalizada",
+    category: "Visual de producto",
+    image:
+      "https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?auto=format&fit=crop&w=1200&q=80",
+    alt: "Prendas deportivas dobladas sobre una superficie neutra",
+    description:
+      "Apoya visualmente la línea deportiva sin confundir esta sección con el Instagram real.",
   },
 ];
 
 export const corporateBenefits = [
   "Cotizaciones para pedidos por volumen",
-  "Bordado de logos con terminacion profesional",
-  "Produccion de pecheras, gorros, polerones y uniformes",
-  "Acompaniamiento cercano desde la idea hasta la entrega",
+  "Bordado de logos con terminación profesional",
+  "Producción de pecheras, gorros, polerones y uniformes",
+  "Acompañamiento cercano desde la idea hasta la entrega",
 ];
 
 export const processSteps = [
   {
     title: "Brief y necesidad",
     description:
-      "Definimos prenda, volumen, uso, identidad visual y plazo esperado para la entrega.",
+      "Definimos prenda, cantidad, uso, identidad visual y plazo esperado para la entrega.",
   },
   {
-    title: "Cotizacion y muestra",
+    title: "Cotización",
     description:
-      "Se evalua el bordado, materiales y complejidad para emitir una propuesta clara.",
+      "Se evalúa bordado, materiales y complejidad para entregar una propuesta clara.",
   },
   {
-    title: "Produccion",
+    title: "Producción",
     description:
-      "Confeccion y bordado con control visual de terminaciones y consistencia de serie.",
+      "Confección y bordado con atención a terminaciones y consistencia en cada serie.",
   },
   {
     title: "Entrega",
@@ -134,19 +138,19 @@ export const processSteps = [
 export const testimonials: Testimonial[] = [
   {
     quote:
-      "Necesitabamos un pedido grande de prendas bordadas y el resultado se vio serio, limpio y bien resuelto.",
+      "Necesitábamos un pedido grande de prendas bordadas y el resultado se vio serio, limpio y bien resuelto.",
     author: "Cliente pyme",
     role: "Pedido corporativo",
   },
   {
     quote:
-      "Lo mejor fue la cercania y la capacidad de aterrizar una idea personalizada sin perder calidad.",
+      "Lo mejor fue la cercanía y la capacidad de aterrizar una idea personalizada sin perder calidad.",
     author: "Cliente particular",
-    role: "Confeccion a medida",
+    role: "Confección a medida",
   },
   {
     quote:
-      "Se nota experiencia real en costura. Las terminaciones hablan por si solas.",
+      "Se nota experiencia real en costura. Las terminaciones hablan por sí solas.",
     author: "Cliente recurrente",
     role: "Bordado y ropa deportiva",
   },
@@ -157,24 +161,24 @@ export const instagramItems: InstagramItem[] = [
     href: "https://www.instagram.com/p/CfaI_5dJalg/",
     image: "/images/instagram/post-1.jpg",
     alt: "Calzas y petos publicados por Dory Sport en Instagram",
-    caption: "Calzas y petos en distintos disenos y colores.",
+    caption: "Calzas y petos en distintos diseños y colores.",
   },
   {
     href: "https://www.instagram.com/p/C43w1l6ue7k/",
     image: "/images/instagram/post-2.jpg",
-    alt: "Publicacion real de ropa personalizada de Dory Sport",
-    caption: "Publicacion real de ropa personalizada y trabajo textil.",
+    alt: "Publicación real de ropa personalizada de Dory Sport",
+    caption: "Trabajo textil real publicado por la cuenta.",
   },
   {
     href: "https://www.instagram.com/reel/C-mA3Xjuzet/",
     image: "/images/instagram/post-3.jpg",
     alt: "Reel real de Dory Sport publicado en Instagram",
-    caption: "Contenido real reciente de la cuenta.",
+    caption: "Contenido reciente de la cuenta.",
   },
   {
     href: "https://www.instagram.com/p/C9yeNaQOOdt/",
     image: "/images/instagram/post-4.jpg",
-    alt: "Publicacion real de prenda deportiva de Dory Sport",
+    alt: "Publicación real de prenda deportiva de Dory Sport",
     caption: "Prenda deportiva publicada por la marca.",
   },
   {
@@ -186,8 +190,8 @@ export const instagramItems: InstagramItem[] = [
   {
     href: "https://www.instagram.com/p/C0PcZV3RJXQ/",
     image: "/images/instagram/post-6.jpg",
-    alt: "Publicacion real de Dory Sport con producto textil",
-    caption: "Mas productos reales disponibles en el perfil.",
+    alt: "Publicación real de Dory Sport con producto textil",
+    caption: "Más productos reales disponibles en el perfil.",
   },
 ];
 
@@ -201,8 +205,8 @@ export const instagramProfile: InstagramProfile = {
   avatar: "/images/instagram/avatar.jpg",
   bio: [
     "Ropa de calidad, hecha en casa.",
-    "Polerones, joggers, calzas, ropa de bebe, pijamas y guateros de semillas.",
-    "Ropa deportiva y mucho mas.",
+    "Polerones, joggers, calzas, ropa de bebé, pijamas y guateros de semillas.",
+    "Ropa deportiva y mucho más.",
   ],
   highlights: [
     { label: "Destacada", image: "/images/instagram/post-1.jpg" },
@@ -217,13 +221,13 @@ export const seoByPage: Record<string, SeoMeta> = {
   home: {
     title: "Dory Sport | Bordados y confecciones en Puerto Montt",
     description:
-      "Confeccion a medida, ropa deportiva y bordados personalizados para personas, pymes y empresas en Puerto Montt.",
+      "Confección a medida, ropa deportiva y bordados personalizados para personas, pymes y empresas en Puerto Montt.",
     path: "/",
   },
   services: {
     title: "Servicios | Dory Sport",
     description:
-      "Bordados personalizados, confeccion a medida, ropa deportiva y pedidos corporativos en Puerto Montt.",
+      "Bordados personalizados, confección a medida, ropa deportiva y pedidos corporativos en Puerto Montt.",
     path: "/servicios",
   },
   business: {
@@ -233,21 +237,21 @@ export const seoByPage: Record<string, SeoMeta> = {
     path: "/empresas",
   },
   catalog: {
-    title: "Catalogo | Dory Sport",
+    title: "Trabajos | Dory Sport",
     description:
-      "Explora prendas, bordados y trabajos visuales de Dory Sport con foco en calidad y personalizacion.",
+      "Explora prendas, bordados y referencias visuales de Dory Sport con foco en calidad y personalización.",
     path: "/catalogo",
   },
   about: {
     title: "Nosotros | Dory Sport",
     description:
-      "Mas de 30 anos de experiencia en costura, bordados y confeccion personalizada en Puerto Montt.",
+      "Más de 30 años de experiencia en costura, bordados y confección personalizada en Puerto Montt.",
     path: "/nosotros",
   },
   contact: {
     title: "Contacto | Dory Sport",
     description:
-      "Cotiza bordados, confeccion y pedidos corporativos con Dory Sport en Puerto Montt.",
+      "Cotiza bordados, confección y pedidos corporativos con Dory Sport en Puerto Montt por WhatsApp.",
     path: "/contacto",
   },
 };
