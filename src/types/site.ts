@@ -35,6 +35,23 @@ export type InstagramItem = {
   caption: string;
 };
 
+export type InstagramHighlight = {
+  label: string;
+  image: string;
+};
+
+export type InstagramProfile = {
+  username: string;
+  displayName: string;
+  location: string;
+  postsCount: string;
+  followers: string;
+  following: string;
+  bio: string[];
+  avatar: string;
+  highlights: InstagramHighlight[];
+};
+
 export type SeoMeta = {
   title: string;
   description: string;

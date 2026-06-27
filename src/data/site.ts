@@ -1,5 +1,6 @@
 import type {
   HeroStat,
+  InstagramProfile,
   InstagramItem,
   NavItem,
   SeoMeta,
@@ -153,48 +154,64 @@ export const testimonials: Testimonial[] = [
 
 export const instagramItems: InstagramItem[] = [
   {
-    href: "https://www.instagram.com/tienda.dory_sport/",
-    image:
-      "https://images.unsplash.com/photo-1503342394128-c104d54dba01?auto=format&fit=crop&w=900&q=80",
-    alt: "Textiles y prendas para inspiracion visual",
-    caption: "Detalles de confeccion y acabados",
+    href: "https://www.instagram.com/p/CfaI_5dJalg/",
+    image: "/images/instagram/post-1.jpg",
+    alt: "Calzas y petos publicados por Dory Sport en Instagram",
+    caption: "Calzas y petos en distintos disenos y colores.",
   },
   {
-    href: "https://www.instagram.com/tienda.dory_sport/",
-    image:
-      "https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=900&q=80",
-    alt: "Bordado y trabajo de marca",
-    caption: "Ropa personalizada y bordados de marca",
+    href: "https://www.instagram.com/p/C43w1l6ue7k/",
+    image: "/images/instagram/post-2.jpg",
+    alt: "Publicacion real de ropa personalizada de Dory Sport",
+    caption: "Publicacion real de ropa personalizada y trabajo textil.",
   },
   {
-    href: "https://www.instagram.com/tienda.dory_sport/",
-    image:
-      "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=900&q=80",
-    alt: "Conjuntos deportivos en escena editorial",
-    caption: "Conjuntos deportivos y prendas a medida",
+    href: "https://www.instagram.com/reel/C-mA3Xjuzet/",
+    image: "/images/instagram/post-3.jpg",
+    alt: "Reel real de Dory Sport publicado en Instagram",
+    caption: "Contenido real reciente de la cuenta.",
   },
   {
-    href: "https://www.instagram.com/tienda.dory_sport/",
-    image:
-      "https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=900&q=80",
-    alt: "Prendas dobladas y presentadas visualmente",
-    caption: "Catalogo visual con foco en color y textura",
+    href: "https://www.instagram.com/p/C9yeNaQOOdt/",
+    image: "/images/instagram/post-4.jpg",
+    alt: "Publicacion real de prenda deportiva de Dory Sport",
+    caption: "Prenda deportiva publicada por la marca.",
   },
   {
-    href: "https://www.instagram.com/tienda.dory_sport/",
-    image:
-      "https://images.unsplash.com/photo-1496747611176-843222e1e57c?auto=format&fit=crop&w=900&q=80",
-    alt: "Moda casual y deportiva",
-    caption: "Inspiracion de ropa hecha con caracter",
+    href: "https://www.instagram.com/reel/C9v8LuMugps/",
+    image: "/images/instagram/post-5.jpg",
+    alt: "Reel real de productos publicados por Dory Sport",
+    caption: "Otra vista real del trabajo publicado en Instagram.",
   },
   {
-    href: "https://www.instagram.com/tienda.dory_sport/",
-    image:
-      "https://images.unsplash.com/photo-1495385794356-15371f348c31?auto=format&fit=crop&w=900&q=80",
-    alt: "Presentacion de prendas y textiles",
-    caption: "Visita nuestras redes para ver mas trabajos",
+    href: "https://www.instagram.com/p/C0PcZV3RJXQ/",
+    image: "/images/instagram/post-6.jpg",
+    alt: "Publicacion real de Dory Sport con producto textil",
+    caption: "Mas productos reales disponibles en el perfil.",
   },
 ];
+
+export const instagramProfile: InstagramProfile = {
+  username: "tienda.dory_sport",
+  displayName: "tienda dory sport",
+  location: "Puerto Montt",
+  postsCount: "137",
+  followers: "1028",
+  following: "957",
+  avatar: "/images/instagram/avatar.jpg",
+  bio: [
+    "Ropa de calidad, hecha en casa.",
+    "Polerones, joggers, calzas, ropa de bebe, pijamas y guateros de semillas.",
+    "Ropa deportiva y mucho mas.",
+  ],
+  highlights: [
+    { label: "Destacada", image: "/images/instagram/post-1.jpg" },
+    { label: "Bordados", image: "/images/instagram/post-2.jpg" },
+    { label: "Pecheras", image: "/images/instagram/post-3.jpg" },
+    { label: "Polerones", image: "/images/instagram/post-4.jpg" },
+    { label: "Deportivo", image: "/images/instagram/post-5.jpg" },
+  ],
+};
 
 export const seoByPage: Record<string, SeoMeta> = {
   home: {
