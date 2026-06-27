@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 180" role="img" aria-label="Dory Sport">
+  <rect width="180" height="180" rx="40" fill="#f7f2e8"/>
+  <circle cx="90" cy="90" r="66" fill="none" stroke="#7f8a69" stroke-width="6"/>
+  <path d="M56 126V47h31c24 0 39 14 39 39 0 26-15 40-39 40H56Zm24-18h6c13 0 21-7 21-22 0-14-8-21-21-21h-6v43Z" fill="#7f8a69"/>
+  <path d="M46 51 82 15" stroke="#7f8a69" stroke-width="7" stroke-linecap="round"/>
+  <circle cx="84" cy="15" r="6" fill="none" stroke="#7f8a69" stroke-width="4"/>
+</svg>

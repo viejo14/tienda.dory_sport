@@ -13,6 +13,7 @@ interface Props {
 const { meta } = Astro.props;
 const canonical = getCanonicalUrl(meta.path);
 const jsonLd = getLocalBusinessJsonLd(meta);
+const ogImage = new URL(siteConfig.socialImage, siteConfig.siteUrl).toString();
 ---
 
 <!doctype html>
@@ -22,15 +23,24 @@ const jsonLd = getLocalBusinessJsonLd(meta);
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{meta.title}</title>
     <meta name="description" content={meta.description} />
+    <meta name="robots" content="index, follow, max-image-preview:large" />
     <link rel="canonical" href={canonical} />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="alternate icon" href="/favicon.svg" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.svg" />
+    <link rel="manifest" href="/site.webmanifest" />
     <meta property="og:type" content="website" />
+    <meta property="og:locale" content="es_CL" />
     <meta property="og:site_name" content={siteConfig.name} />
     <meta property="og:title" content={meta.title} />
     <meta property="og:description" content={meta.description} />
     <meta property="og:url" content={canonical} />
-    <meta property="og:image" content="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=1200&q=80" />
+    <meta property="og:image" content={ogImage} />
+    <meta property="og:image:alt" content={siteConfig.name} />
     <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={meta.title} />
+    <meta name="twitter:description" content={meta.description} />
+    <meta name="twitter:image" content={ogImage} />
     <meta name="theme-color" content="#10212b" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />

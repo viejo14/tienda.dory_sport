@@ -22,6 +22,8 @@ export const siteConfig = {
     "https://www.instagram.com/tienda.dory_sport/",
   siteUrl:
     import.meta.env.PUBLIC_SITE_URL || "https://dory-sport.netlify.app",
+  socialImage: "/og-dory-sport.svg",
+  logo: "/apple-touch-icon.svg",
 };
 
 export const navItems: NavItem[] = [

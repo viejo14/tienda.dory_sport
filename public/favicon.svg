@@ -1,4 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Dory Sport">
-  <rect width="64" height="64" rx="18" fill="#10212b"/>
-  <path d="M20 47V16h12.2c8.8 0 14.4 5.8 14.4 15.4 0 9.8-5.5 15.6-14.4 15.6H20Zm9.4-7.4h2c4.6 0 7.5-2.7 7.5-8.2 0-5.3-3-8-7.5-8h-2v16.2Z" fill="#f7f2e8"/>
+  <rect width="64" height="64" rx="16" fill="#f7f2e8"/>
+  <circle cx="32" cy="32" r="24" fill="none" stroke="#7f8a69" stroke-width="2"/>
+  <path d="M20 45V18h11c8.2 0 13.4 5 13.4 13.5C44.4 40 39.1 45 31 45H20Zm8.2-6.2h2.2c4.4 0 7-2.3 7-7.3 0-4.8-2.6-7.1-7-7.1h-2.2v14.4Z" fill="#7f8a69"/>
+  <path d="M16 19 29 6" stroke="#7f8a69" stroke-width="2.6" stroke-linecap="round"/>
+  <circle cx="29.5" cy="6.5" r="2.4" fill="none" stroke="#7f8a69" stroke-width="1.6"/>
 </svg>
