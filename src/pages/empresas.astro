@@ -1,0 +1,43 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import PageHero from "@/components/common/PageHero.astro";
+import { corporateBenefits, processSteps, seoByPage, whatsappUrl } from "@/data/site";
+---
+
+<BaseLayout meta={seoByPage.business}>
+  <PageHero
+    eyebrow="Empresas y pymes"
+    title="Pedidos corporativos con bordado profesional y una presentacion a la altura de tu marca."
+    copy="Si tu negocio necesita pecheras, gorros, polerones o prendas bordadas por volumen, Dory Sport puede resolver una propuesta cuidada, cercana y visualmente consistente."
+  />
+
+  <section class="container-shell py-12 md:py-20">
+    <div class="grid gap-6 lg:grid-cols-[1fr_0.95fr]">
+      <article class="card-surface rounded-[2rem] p-8 md:p-10">
+        <h2 class="font-display text-4xl leading-none">Lo que una empresa necesita escuchar</h2>
+        <ul class="mt-6 space-y-4 text-sm leading-7 text-[var(--color-ink-soft)]">
+          {corporateBenefits.map((item) => <li>• {item}</li>)}
+        </ul>
+        <a class="button-primary mt-8" href={whatsappUrl} target="_blank" rel="noreferrer">
+          Solicitar cotizacion B2B
+        </a>
+      </article>
+
+      <img
+        class="h-full min-h-[28rem] w-full rounded-[2rem] object-cover shadow-[0_26px_90px_rgba(16,33,43,0.14)]"
+        src="https://images.unsplash.com/photo-1523381210434-271e8be1f52b?auto=format&fit=crop&w=1400&q=80"
+        alt="Equipo con prendas de trabajo y marca"
+      />
+    </div>
+
+    <div class="mt-10 grid gap-5 md:grid-cols-2 xl:grid-cols-4">
+      {processSteps.map((step, index) => (
+        <article class="card-surface rounded-[1.75rem] p-6">
+          <p class="text-sm font-extrabold uppercase tracking-[0.18em] text-[var(--color-sun)]">0{index + 1}</p>
+          <h3 class="mt-5 font-display text-3xl leading-none">{step.title}</h3>
+          <p class="mt-4 text-sm leading-7 text-[var(--color-ink-soft)]">{step.description}</p>
+        </article>
+      ))}
+    </div>
+  </section>
+</BaseLayout>

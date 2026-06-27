@@ -1,0 +1,20 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+---
+
+<BaseLayout
+  meta={{
+    title: "404 | Dory Sport",
+    description: "La pagina que buscas no existe.",
+    path: "/404",
+  }}
+>
+  <section class="container-shell flex min-h-[70svh] flex-col items-center justify-center gap-6 py-20 text-center">
+    <span class="eyebrow">404</span>
+    <h1 class="font-display text-6xl leading-none md:text-8xl">Pagina no encontrada</h1>
+    <p class="max-w-2xl text-lg leading-8 text-[var(--color-ink-soft)]">
+      Volvamos al inicio y retomemos la navegacion principal del sitio.
+    </p>
+    <a class="button-primary" href="/">Ir al inicio</a>
+  </section>
+</BaseLayout>

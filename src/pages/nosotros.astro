@@ -1,0 +1,40 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import PageHero from "@/components/common/PageHero.astro";
+import { seoByPage } from "@/data/site";
+---
+
+<BaseLayout meta={seoByPage.about}>
+  <PageHero
+    eyebrow="Nosotros"
+    title="Una marca que nace del oficio y se proyecta con una mirada mas actual."
+    copy="Dory Sport representa experiencia real en costura, trabajo cercano y capacidad de traducir una necesidad textil en una prenda bien resuelta."
+  />
+
+  <section class="container-shell grid gap-6 py-12 md:py-20 lg:grid-cols-[0.9fr_1.1fr]">
+    <img
+      class="h-full min-h-[32rem] w-full rounded-[2rem] object-cover shadow-[0_26px_90px_rgba(16,33,43,0.14)]"
+      src="https://images.unsplash.com/photo-1516826957135-700dedea698c?auto=format&fit=crop&w=1400&q=80"
+      alt="Espacio textil con telas y costura"
+    />
+
+    <article class="card-surface rounded-[2rem] p-8 md:p-10">
+      <h2 class="font-display text-4xl leading-none">Experiencia, cercania y cuidado por la terminacion.</h2>
+      <div class="mt-6 space-y-5 text-base leading-8 text-[var(--color-ink-soft)]">
+        <p>
+          Detras de Dory Sport hay mas de 30 anos de experiencia en costura, confeccion y prendas
+          personalizadas. Esa trayectoria permite trabajar con un nivel de criterio que da confianza
+          tanto a clientes particulares como a empresas.
+        </p>
+        <p>
+          La marca no busca verse industrial ni impersonal. Busca verse limpia, bien hecha y
+          cercana. Ese equilibrio es parte del valor del proyecto.
+        </p>
+        <p>
+          La web debe sostener esa narrativa con una estetica sobria, elegante y clara, donde el
+          trabajo textil tenga protagonismo real.
+        </p>
+      </div>
+    </article>
+  </section>
+</BaseLayout>

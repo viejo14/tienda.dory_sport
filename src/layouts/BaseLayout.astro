@@ -1,0 +1,52 @@
+---
+import SiteFooter from "@/components/common/SiteFooter.astro";
+import SiteHeader from "@/components/common/SiteHeader.astro";
+import { siteConfig } from "@/data/site";
+import { getCanonicalUrl, getLocalBusinessJsonLd } from "@/lib/seo";
+import type { SeoMeta } from "@/types/site";
+import "@/styles/globals.css";
+
+interface Props {
+  meta: SeoMeta;
+}
+
+const { meta } = Astro.props;
+const canonical = getCanonicalUrl(meta.path);
+const jsonLd = getLocalBusinessJsonLd(meta);
+---
+
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{meta.title}</title>
+    <meta name="description" content={meta.description} />
+    <link rel="canonical" href={canonical} />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content={siteConfig.name} />
+    <meta property="og:title" content={meta.title} />
+    <meta property="og:description" content={meta.description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:image" content="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=1200&q=80" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="theme-color" content="#10212b" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <script is:inline type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+  </head>
+  <body>
+    <div class="page-shell">
+      <SiteHeader />
+      <main>
+        <slot />
+      </main>
+      <SiteFooter />
+    </div>
+  </body>
+</html>

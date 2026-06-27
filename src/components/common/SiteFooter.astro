@@ -1,0 +1,47 @@
+---
+import { navItems, siteConfig, whatsappUrl } from "@/data/site";
+---
+
+<footer class="mt-24 border-t border-black/6 bg-[var(--color-ink)] text-[var(--color-latte)]">
+  <div class="container-shell grid gap-12 py-16 lg:grid-cols-[1.2fr_0.7fr_0.8fr]">
+    <div class="space-y-5">
+      <p class="font-display text-4xl">Dory Sport</p>
+      <p class="max-w-xl text-sm leading-7 text-white/70">
+        Bordados, confeccion y prendas personalizadas para personas, pymes y empresas.
+        Una propuesta local en Puerto Montt con oficio real y terminacion profesional.
+      </p>
+      <div class="flex flex-wrap gap-3">
+        <a class="button-secondary border-white/15 bg-white/5 text-[var(--color-latte)]" href={whatsappUrl} target="_blank" rel="noreferrer">
+          Solicitar cotizacion
+        </a>
+        <a class="button-secondary border-white/15 bg-transparent text-[var(--color-latte)]" href={siteConfig.instagramUrl} target="_blank" rel="noreferrer">
+          Ver Instagram
+        </a>
+      </div>
+    </div>
+
+    <div>
+      <p class="mb-5 text-xs font-extrabold uppercase tracking-[0.22em] text-white/45">Mapa del sitio</p>
+      <ul class="space-y-3 text-sm text-white/75">
+        {navItems.map((item) => <li><a class="hover:text-white" href={item.href}>{item.label}</a></li>)}
+      </ul>
+    </div>
+
+    <div>
+      <p class="mb-5 text-xs font-extrabold uppercase tracking-[0.22em] text-white/45">Contacto</p>
+      <ul class="space-y-3 text-sm text-white/75">
+        <li>{siteConfig.location}</li>
+        <li>
+          <a class="hover:text-white" href={siteConfig.instagramUrl} target="_blank" rel="noreferrer">
+            {siteConfig.instagramUrl.replace("https://www.", "")}
+          </a>
+        </li>
+        <li>
+          <a class="hover:text-white" href={whatsappUrl} target="_blank" rel="noreferrer">
+            WhatsApp comercial
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</footer>

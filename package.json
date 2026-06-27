@@ -1,0 +1,32 @@
+{
+  "name": "dorissport.cl",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "check": "astro check"
+  },
+  "keywords": [
+    "astro",
+    "seo",
+    "textil"
+  ],
+  "author": "",
+  "license": "MIT",
+  "description": "Sitio web comercial para Dory Sport.",
+  "dependencies": {
+    "@astrojs/sitemap": "^3.7.3",
+    "@tailwindcss/vite": "^4.3.1",
+    "astro": "^7.0.3",
+    "tailwindcss": "^4.3.1",
+    "zod": "^4.4.3"
+  },
+  "devDependencies": {
+    "@astrojs/check": "^0.9.9",
+    "typescript": "^6.0.3"
+  }
+}

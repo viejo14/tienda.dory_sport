@@ -1,0 +1,21 @@
+---
+interface Props {
+  eyebrow: string;
+  title: string;
+  copy: string;
+}
+
+const { eyebrow, title, copy } = Astro.props;
+---
+
+<section class="container-shell pt-16 md:pt-24">
+  <div class="card-surface rounded-[2rem] p-8 md:p-14">
+    <span class="eyebrow">{eyebrow}</span>
+    <h1 class="mt-6 max-w-4xl font-display text-5xl leading-[0.95] tracking-[-0.04em] md:text-7xl">
+      {title}
+    </h1>
+    <p class="mt-6 max-w-3xl text-base leading-8 text-[var(--color-ink-soft)] md:text-lg">
+      {copy}
+    </p>
+  </div>
+</section>
