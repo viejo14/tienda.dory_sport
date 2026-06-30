@@ -22,7 +22,7 @@ export const siteConfig = {
   siteUrl:
     import.meta.env.PUBLIC_SITE_URL || "https://dory-sport.netlify.app",
   socialImage: "/og-dory-sport.svg",
-  logo: "/apple-touch-icon.svg",
+  logo: "/images/brand/logo-dory.jpg",
 };
 
 export const navItems: NavItem[] = [
