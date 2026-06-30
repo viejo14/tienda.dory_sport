@@ -2,46 +2,28 @@
 import { navItems, siteConfig, whatsappUrl } from "@/data/site";
 ---
 
-<footer class="mt-24 border-t border-black/6 bg-[var(--color-ink)] text-[var(--color-latte)]">
-  <div class="container-shell grid gap-12 py-16 lg:grid-cols-[1.2fr_0.7fr_0.8fr]">
-    <div class="space-y-5">
-      <img
-        class="h-24 w-auto rounded-2xl bg-white/80 p-2 object-contain"
-        src="/images/brand/logo-dory-sport.png"
-        alt="Logo de Dory Sport"
-      />
-      <p class="max-w-xl text-sm leading-7 text-white/70">
-        Bordados, confección y prendas personalizadas para personas, pymes y empresas.
-        Una propuesta local en Puerto Montt con oficio real y terminación profesional.
-      </p>
-      <div class="flex flex-wrap gap-3">
-        <a class="button-secondary border-white/15 bg-white/5 text-[var(--color-latte)]" href={whatsappUrl} target="_blank" rel="noreferrer">
-          Escribir por WhatsApp
-        </a>
-        <a class="button-secondary border-white/15 bg-transparent text-[var(--color-latte)]" href={siteConfig.instagramUrl} target="_blank" rel="noreferrer">
-          Ver Instagram
-        </a>
-      </div>
+<footer class="site-footer">
+  <div class="container-shell site-footer__grid">
+    <div class="site-footer__brand">
+      <img src="/images/brand/logo-dory-sport.png" alt="Logo de Dory Sport" width="120" height="120" />
+      <p>Oficio textil, bordados y confección personalizada desde Puerto Montt.</p>
     </div>
 
-    <div>
-      <p class="mb-5 text-xs font-extrabold uppercase tracking-[0.22em] text-white/45">Secciones</p>
-      <ul class="space-y-3 text-sm text-white/75">
-        {navItems.map((item) => <li><a class="hover:text-white" href={item.href}>{item.label}</a></li>)}
-      </ul>
-    </div>
+    <nav aria-label="Secciones del sitio">
+      <p class="footer-label">Navegación</p>
+      {navItems.map((item) => <a href={item.href}>{item.label}</a>)}
+    </nav>
 
     <div>
-      <p class="mb-5 text-xs font-extrabold uppercase tracking-[0.22em] text-white/45">Contacto</p>
-      <ul class="space-y-3 text-sm text-white/75">
-        <li>{siteConfig.location}</li>
-        <li>{siteConfig.whatsappDisplay}</li>
-        <li>
-          <a class="hover:text-white" href={siteConfig.instagramUrl} target="_blank" rel="noreferrer">
-            {siteConfig.instagramUrl.replace("https://www.", "")}
-          </a>
-        </li>
-      </ul>
+      <p class="footer-label">Contacto</p>
+      <p>{siteConfig.location}</p>
+      <a href={whatsappUrl} target="_blank" rel="noreferrer">{siteConfig.whatsappDisplay}</a>
+      <a href={siteConfig.instagramUrl} target="_blank" rel="noreferrer">@tienda.dory_sport</a>
     </div>
+  </div>
+
+  <div class="container-shell site-footer__bottom">
+    <span>© {new Date().getFullYear()} Dory Sport</span>
+    <span>Hecho con oficio en el sur de Chile</span>
   </div>
 </footer>

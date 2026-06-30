@@ -2,35 +2,55 @@
 import { navItems, siteConfig, whatsappUrl } from "@/data/site";
 ---
 
-<header class="sticky top-0 z-50 border-b border-black/5 bg-[#fcf8f2]/85 backdrop-blur-xl">
-  <div class="container-shell flex items-center justify-between gap-6 py-4">
-    <a class="flex items-center gap-4" href="/#inicio">
+<header class="site-header" data-site-header>
+  <div class="container-shell site-header__inner">
+    <a class="brand-lockup" href="/#inicio" aria-label="Ir al inicio de Dory Sport">
       <img
-        class="h-16 w-auto rounded-2xl object-contain md:h-20"
+        class="brand-lockup__mark"
         src="/images/brand/logo-dory-sport.png"
-        alt="Logo de Dory Sport"
+        alt=""
+        width="72"
+        height="72"
       />
-      <div class="hidden sm:block">
-        <p class="font-display text-2xl leading-none">{siteConfig.name}</p>
-        <p class="mt-1 text-xs uppercase tracking-[0.26em] text-[var(--color-ink-soft)]">
-          Bordados y confección
-        </p>
-      </div>
+      <span class="brand-lockup__copy">
+        <strong>{siteConfig.name}</strong>
+        <small>Bordados y confección</small>
+      </span>
     </a>
 
-    <nav class="hidden items-center gap-7 lg:flex">
+    <nav class="desktop-nav" aria-label="Navegación principal">
       {navItems.map((item) => (
-        <a
-          href={item.href}
-          class="text-sm font-semibold text-[var(--color-ink-soft)] transition-colors duration-200 hover:text-[var(--color-ink)]"
-        >
-          {item.label}
-        </a>
+        <a href={item.href} data-nav-link>{item.label}</a>
       ))}
     </nav>
 
-    <a class="button-primary hidden lg:inline-flex" href={whatsappUrl} target="_blank" rel="noreferrer">
-      Cotizar por WhatsApp
+    <a class="button-primary site-header__cta" href={whatsappUrl} target="_blank" rel="noreferrer">
+      Cotizar
     </a>
+
+    <button
+      class="menu-toggle"
+      type="button"
+      aria-label="Abrir menú"
+      aria-controls="mobile-menu"
+      aria-expanded="false"
+      data-menu-toggle
+    >
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+
+  <div class="mobile-menu" id="mobile-menu" data-mobile-menu>
+    <nav class="container-shell" aria-label="Navegación móvil">
+      {navItems.map((item, index) => (
+        <a href={item.href} data-nav-link data-menu-link>
+          <span>0{index + 1}</span>{item.label}
+        </a>
+      ))}
+      <a class="button-primary" href={whatsappUrl} target="_blank" rel="noreferrer">
+        Cotizar por WhatsApp
+      </a>
+    </nav>
   </div>
 </header>

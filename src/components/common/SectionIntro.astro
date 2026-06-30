@@ -8,8 +8,8 @@ interface Props {
 const { eyebrow, title, copy } = Astro.props;
 ---
 
-<div class="space-y-5">
+<div class="section-intro" data-reveal>
   <span class="eyebrow">{eyebrow}</span>
-  <h2 class="section-title max-w-4xl">{title}</h2>
+  <h2 class="section-title">{title}</h2>
   <p class="section-copy">{copy}</p>
 </div>
